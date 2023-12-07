@@ -1,0 +1,283 @@
+/* font-family: 'Pacifico', cursive;
+font-family: 'Poppins', sans-serif; */
+
+:root {
+    --blue: rgb(22, 87, 201);
+    --yellow: rgb(255, 179, 0);
+}
+
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: black;
+}
+
+h1 {
+    font-family: 'Pacifico', cursive;
+    font-size: 100px;
+    color: black;
+    margin: 0;
+    line-height: 1em;
+}
+
+h1 span {
+    font-size: 48px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 200;
+}
+
+h2 {
+    font-size: 38px;
+    line-height: 1em;
+    color: var(--blue);
+    margin: 0;
+    text-align: center;
+}
+
+h2 span {
+    font-size: 28px;
+    font-weight: 200;
+    color: white;
+}
+
+h3 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 24px;
+    font-weight: 200;
+    color: white;
+    margin: 0;
+    text-align: left;
+}
+
+.main-menu {
+    width: 60%;
+    margin: 0 auto;
+}
+
+.main-menu ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    padding: 0;
+    margin: 0;
+}
+
+.main-menu ul li {
+    list-style: none;
+}
+
+.main-menu a {
+    text-decoration: none;
+    font-weight: 600;
+    color: var(--yellow);
+}
+
+.main-menu a.current {
+    border-bottom: 2px solid var(--yellow);
+}
+
+.main-menu a:hover {
+    border-bottom: 2px solid var(--yellow);
+}
+
+.logo {
+    background-color: var(--blue);
+    padding: 16px;
+}
+
+.logo a:hover {
+    border-bottom: none;
+}
+
+.video-container {
+    height: 450px;
+    width: 100%;
+    position: relative;
+    margin: 0 auto;
+    z-index: -100;
+}
+
+.video-container video {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: -10%;
+    object-fit: cover;
+    z-index: 0;
+}
+
+.video-container .caption {
+    z-index: 1;
+    position: relative;
+    text-align: center;
+}
+
+.container {
+    margin-top: -25px;
+    padding-top: 32px;
+    padding-bottom: 64px;
+}
+
+.caption a {
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: 600;
+    background-color: var(--yellow);
+    color: black;
+    padding: 8px 24px;
+    border-radius: 8px;
+}
+
+.destinations {
+    width: 80%;
+    margin: 32px auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 16px;
+}
+
+.location {
+    width: 30%;
+    height: 350px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: transform 1s ease;
+}
+
+.location:hover {
+    transform: scale(1.05);
+}
+
+.location h3 {
+    font-weight: 600;
+    color: black;
+}
+
+.location a {
+    text-decoration: none;
+    background-color: black;
+    color: var(--yellow);
+    padding: 0 16px;
+    border-radius: 8px;
+    margin-top: 8px;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.5s ease-in-out, padding 0.5s ease-in-out;
+    white-space: nowrap;
+    opacity: 0;
+}
+
+.location:hover a {
+    max-height: 100px;
+    padding: 8px 16px;
+    opacity: 1;
+}
+
+.north {
+    background-image: linear-gradient(rgba(255, 179, 0, 0.8), rgba(255, 179, 0, 0.3)), url(../images/shutterstock-121410820.webp);
+}
+
+.northeast {
+    background-image: linear-gradient(rgba(255, 179, 0, 0.8), rgba(255, 179, 0, 0.3)), url(../images/image_processing20220907-4-88eex1.jpg);
+}
+
+.south {
+    background-image: linear-gradient(rgba(255, 179, 0, 0.8), rgba(255, 179, 0, 0.3)), url(../images/img_9605.jpg.webp);
+}
+
+.two-columns {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    padding-top: 32px;
+}
+
+.keywords {
+    display: flex;
+    gap: 16px;
+    justify-content: flex-end;
+}
+
+.keywords p {
+    background-color: black;
+    border-radius: 32px;
+    padding: 8px 16px;
+    color: white;
+    font-weight: 600;
+    text-align: center;
+    margin: 8px 0;
+}
+
+.keywords p:hover {
+    color: var(--yellow);
+}
+
+.food {
+    width: 50%;
+    height: 700px;
+    background-image: url(../images/topo-comidas-brasileiras.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.food-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 32px;
+}
+
+.food-container {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    width: 100px;
+    height: 100px;
+    color: var(--blue);
+    font-weight: 600;
+    padding: 16px;
+    text-align: center;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.4);
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.food-container:hover {
+    box-shadow: 16px 16px 24px rgba(0, 0, 0, 0.2);
+}
+
+.food-container p {
+    margin: 4px;
+    line-height: 1em;
+}
+
+footer div {
+    width: 80%;
+    display: flex;
+    color: var(--yellow);
+    justify-content: space-between;
+    align-items: center;
+    margin: 8px auto;
+}
+
+footer div div {
+    display: flex;
+    align-items: center;
+}
