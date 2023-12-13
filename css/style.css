@@ -767,6 +767,7 @@ footer div div {
     .image-1 {
         grid-column: 1 / span 2;
         grid-row: 2 / span 1;
+        height: 300px;
     }
     
     .image-2 {
