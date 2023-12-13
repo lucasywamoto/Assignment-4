@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@200;600&display=swap" rel="stylesheet">
+    <script src="script.js" defer></script>
 </head>
 <body>
     <header>
@@ -113,6 +114,24 @@
                 </div> 
                 <div class="image-3">
                     <img src="images/onde-ficar-em-fernando-de-noronha-1920x640-1.jpg.webp" alt="gramado-3" width="100%">
+                </div>
+            </div>
+            <img src="images/logo-icon.svg" alt="icon" width="24" style="margin: 8px auto; display: block; margin-top: 32px;">
+        </div>
+        <div class="mood">
+            <h2>Already booked? <span>Get in the mood!</span></h2>
+            <div class="mood-two-columns">
+                <div>
+                    <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/37i9dQZF1DX1oTjVZnUYT3?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                </div>
+                <div class="check-days">
+                    <h3 class="change-display">Check how many days are<br>left until your trip!</h3>
+                    <div class="check-days-form change-display">
+                        <input type="date" name="trip-date" id="trip-date">
+                        <button onclick="calculateDays()"><img src="images/check.svg" alt="check icon" width="32"></button>
+                    </div>
+                    <h3 id="result"></h3>
+                    <span id="sentence">days until your trip!</span>
                 </div>
             </div>
         </div>
