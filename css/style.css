@@ -88,6 +88,7 @@ h3 {
 .logo {
     background-color: var(--blue);
     padding: 16px;
+    z-index: 1;
 }
 
 .logo a:hover {
@@ -95,18 +96,17 @@ h3 {
 }
 
 .video-container {
-    height: 450px;
+    height: 600px;
     width: 100%;
     position: relative;
     margin: 0 auto;
-    z-index: -100;
 }
 
 .video-container video {
     width: 100%;
     height: 100%;
     position: absolute;
-    top: -10%;
+    top: -5%;
     object-fit: cover;
     z-index: 0;
 }
@@ -115,6 +115,7 @@ h3 {
     z-index: 1;
     position: relative;
     text-align: center;
+    padding-top: 80px;
 }
 
 .container {
@@ -127,10 +128,17 @@ h3 {
     text-decoration: none;
     font-size: 24px;
     font-weight: 600;
-    background-color: var(--yellow);
+    border: 2px solid black;
     color: black;
     padding: 8px 24px;
     border-radius: 8px;
+    transition: 0.5s ease-in-out;
+}
+
+.caption a:hover {
+    border: 2px solid var(--yellow);
+    color: var(--yellow);
+    transition: 0.5s ease-in-out;
 }
 
 .destinations {
@@ -205,6 +213,14 @@ h3 {
     padding-top: 32px;
 }
 
+.join-us {
+    width: 35%;
+}
+
+.keywords-container {
+    width: 65%;
+}
+
 .keywords {
     display: flex;
     gap: 16px;
@@ -219,6 +235,7 @@ h3 {
     font-weight: 600;
     text-align: center;
     margin: 8px 0;
+    font-size: 14px;
 }
 
 .keywords p:hover {
@@ -237,7 +254,7 @@ h3 {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 20px;
-    justify-content: center;
+    justify-items: center;
     align-items: center;
     margin-top: 32px;
 }
@@ -268,6 +285,13 @@ h3 {
     line-height: 1em;
 }
 
+.uncover {
+    width: 50%;
+    color: white;
+    margin-right: 10%;
+    margin-left: 5%;
+}
+
 footer div {
     width: 80%;
     display: flex;
@@ -280,4 +304,207 @@ footer div {
 footer div div {
     display: flex;
     align-items: center;
+}
+
+.full-image {
+    height: 600px;
+    width: 100%;
+    background-image: url(../images/anavilhanas-lodge.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.full-image img {
+    height: 120%;
+}
+
+.our-guides {
+    width: 80%;
+    margin: 80px auto;
+}
+
+.guide-profile {
+    background-color: var(--blue);
+    border-radius: 16px;
+    margin: 32px 0;
+    padding: 32px;
+    display: flex;
+    border: 1px solid transparent;
+    transition: 0.3s ease-in-out;
+}
+
+.guide-profile img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-right: 32px;
+}
+
+.guide-profile h3 {
+    font-weight: 600;
+    color: var(--yellow);
+}
+
+.guide-profile h3 span {
+    font-weight: 300;
+    color: black;
+}
+
+.guide-profile p {
+    color: white;
+}
+
+.guide-profile:hover {
+    border: 1px solid white;
+    /* box-shadow: 0px 0px 32px rgba(255,255,255,0.4); */
+    transition: 0.3s ease-in-out;
+}
+
+.our-guides hr {
+    border: none;
+    border-top: 1px solid var(--yellow);
+}
+
+.our-guides > p {
+    color: var(--yellow);
+    text-align: center;
+}
+
+.form-container {
+    width: 80%;
+    margin: 32px auto;
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    gap: 32px;
+}
+
+.form-container h2 {
+    align-self: center;
+    text-align: right;
+}
+
+.contact-form {
+    border: 1px solid var(--blue);
+    border-radius: 16px;
+    padding: 32px;
+}
+
+.contact-form input, .contact-form textarea, .contact-form select {
+    background-color: transparent;
+    border-radius: 8px;
+    border: 1px solid var(--blue);
+    padding: 8px;
+    margin: 8px auto;
+    color: var(--blue);
+    font-weight: 600;
+    font-size: 16px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.contact-form input::placeholder, .contact-form textarea::placeholder {
+    color: var(--blue);
+    opacity: 1;
+    font-weight: 600;
+}
+
+.contact-form input[type="submit"] {
+    transition: 0.5s ease-in-out;
+}
+
+.contact-form input[type="submit"]:hover {
+    background-color: var(--blue);
+    color: black;
+    transition: 0.5s ease-in-out;
+}
+
+.map {
+    border-radius: 16px;
+    overflow: hidden;
+    filter: grayscale(100%);
+    transition: 0.5s ease-in-out;
+}
+
+.map:hover {
+    filter: grayscale(0%);
+    transition: 0.5s ease-in-out;
+}
+
+/* mobile */
+
+@media only screen and (max-width: 700px) {
+
+    .main-menu {
+        width: 90%;
+    }
+
+    .destinations {
+        flex-direction: column;
+        gap: 32px;
+    }
+
+    .destinations > div {
+        width: 100%;
+    }
+
+    .two-columns {
+        flex-direction: column;
+    }
+
+    .two-columns > div {
+        width: 100%;
+    }
+
+    .keywords {
+        justify-content: flex-start;
+    }
+
+    .keywords p {
+        font-size: 11px;
+    }
+
+    .uncover {
+        margin-top: 32px;
+        width: 80% !important;
+        text-align: left;
+    }
+
+    .uncover h2 {
+        text-align: left !important;
+    }
+
+    .food-grid {
+        grid-template-columns: repeat(2, 1fr);
+        width: fit-content;
+        margin: 32px auto;
+    }
+
+    .guide-profile {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .guide-profile img {
+        margin: 0;
+        margin-bottom: 16px;
+    }
+
+    .guide-profile h3 {
+        text-align: center;
+    }
+
+    .form-container {
+        flex-direction: column;
+    }
+
+    .form-container h2 {
+        text-align: center;
+    }
+
 }

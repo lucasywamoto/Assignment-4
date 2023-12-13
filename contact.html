@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Come to Brazil</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@200;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav class="main-menu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li class="logo"><a href="index.html"><img src="images/logo.svg" alt="Logo" width="80"></a></li>
+                <li><a href="explore.html">Explore</a></li>
+                <li><a href="contact.html" class="current">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="form-container">
+            <h2>Contact<br>Us</h2>
+            <form action="" class="contact-form">
+                <input type="text" id="name" name="name" placeholder="Your name" required><br>
+                <input type="email" id="email" name="email" placeholder="Your email" required><br>
+                <select name="destination" id="destination">
+                    <option value="">--Select a destination--</option>
+                    <option value="north">North</option>
+                    <option value="northeast">Northeast</option>
+                    <option value="south">South</option>
+                  </select><br>                  
+                <input type="date" name="" id=""><br>
+                <textarea name="message" id="message" cols="20" rows="5" placeholder="Your message" required></textarea><br>
+                <input type="submit" value="Send">
+            </form>
+            <div class="map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2885.8931567916056!2d-79.38641838858804!3d43.6711918511469!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b3536309f8137%3A0xa212cc2534929ade!2s120%20Bloor%20St%20E%2C%20Toronto%2C%20ON%20M4W%201B7!5e0!3m2!1sen!2sca!4v1702427462774!5m2!1sen!2sca" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div>
+            <div style="justify-content: flex-start;"><small>© 2023 Come to Brazil</small></div>
+            <div style="justify-content: center;"><img src="images/logo-icon.svg" alt="logo icon" width="48"></div>
+            <div style="justify-content: flex-end;"><a href="https://www.instagram.com" target="_blank"><img src="images/instagram-icon.svg" alt="Instagram" width="24"></a></div>
+        </div>
+    </footer>
+</body>
+</html>
