@@ -1,5 +1,5 @@
 function toTop() {
-    document.body.scrollTop = 0;
+    document.body.scrollTop = 0; 
     document.documentElement.scrollTop = 0;
 } 
 
@@ -15,8 +15,6 @@ function calculateDays() {
 
     const timeDiff = date.getTime() - today.getTime()
     const daysRemaining = Math.ceil(timeDiff / (1000 * 3600 * 24));
-
-    console.log(timeDiff)
 
     document.getElementById('result').innerHTML = daysRemaining;
     document.getElementById('sentence').style.display = "block";
