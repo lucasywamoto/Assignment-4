@@ -1,9 +1,14 @@
+function toTop() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+} 
+
 function calculateDays() {
     const elements = document.getElementsByClassName("change-display");
 
-for (let i = 0; i < elements.length; i++) {
-    elements[i].style.display = "none";
-}
+    for (let i = 0; i < elements.length; i++) {
+        elements[i].style.display = "none";
+    }
 
     const today = new Date()
     const date =  new Date(document.getElementById('trip-date').value)
@@ -16,4 +21,3 @@ for (let i = 0; i < elements.length; i++) {
     document.getElementById('result').innerHTML = daysRemaining;
     document.getElementById('sentence').style.display = "block";
 }
-
